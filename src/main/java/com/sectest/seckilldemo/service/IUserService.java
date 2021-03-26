@@ -1,7 +1,12 @@
 package com.sectest.seckilldemo.service;
 
+import com.sectest.seckilldemo.common.RespResult;
 import com.sectest.seckilldemo.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.sectest.seckilldemo.vo.LoginVo;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * <p>
@@ -13,4 +18,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IUserService extends IService<User> {
 
+    RespResult doLogin(LoginVo loginVo, HttpServletRequest request, HttpServletResponse response);
 }
