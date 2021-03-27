@@ -24,4 +24,12 @@
          s.seckill_price,s.stock_count,s.start_date,s.end_date
          from t_goods g left join t_seckill_goods s on g.id=s.goods_id;
     </select>
+
+    <select id="findGoodsVoByGoodsId" resultType="com.sectest.seckilldemo.vo.GoodsVo">
+        select
+         g.id,g.goods_name,g.goods_title,g.goods_img,g.goods_detail,g.goods_price,g.goods_stock,
+         s.seckill_price,s.stock_count,s.start_date,s.end_date
+         from t_goods g left join t_seckill_goods s on g.id=s.goods_id
+         where g.id = #{goodsId};
+    </select>
 </mapper>
