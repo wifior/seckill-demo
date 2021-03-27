@@ -17,20 +17,10 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/goods")
 public class GoodsController {
 
-    @Autowired
-    private IUserService userService;
-
     @RequestMapping("/toList")
-    public String toList(HttpServletRequest request, HttpServletResponse response, Model model, @CookieValue("userTicket")String ticket){
+    public String toList(Model model, User user){
 
-        if(!StringUtils.hasLength(ticket)){
-            return "login";
-        }
-        //User user = (User) session.getAttribute(ticket);
-         User user = userService.getUserByCookie(ticket,request,response);
-        if(null==user){
-            return "login";
-        }
+
         model.addAttribute("user",user);
         return "goodsList";
     }
