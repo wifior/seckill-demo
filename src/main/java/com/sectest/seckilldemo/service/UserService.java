@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Think
  * @since 2021-03-25
  */
-public interface IUserService extends IService<User> {
+public interface UserService extends IService<User> {
 
     RespResult doLogin(LoginVo loginVo, HttpServletRequest request, HttpServletResponse response);
 

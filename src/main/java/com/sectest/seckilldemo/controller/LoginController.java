@@ -1,7 +1,7 @@
 package com.sectest.seckilldemo.controller;
 
 import com.sectest.seckilldemo.common.RespResult;
-import com.sectest.seckilldemo.service.IUserService;
+import com.sectest.seckilldemo.service.UserService;
 import com.sectest.seckilldemo.vo.LoginVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ import javax.validation.Valid;
 public class LoginController {
 
     @Autowired
-    private IUserService userService;
+    private UserService userService;
 
     @RequestMapping("/tologin")
     public String toLogin(){

@@ -5,7 +5,7 @@ import com.sectest.seckilldemo.common.RespResult;
 import com.sectest.seckilldemo.entity.User;
 import com.sectest.seckilldemo.exception.GlobalException;
 import com.sectest.seckilldemo.mapper.UserMapper;
-import com.sectest.seckilldemo.service.IUserService;
+import com.sectest.seckilldemo.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.sectest.seckilldemo.utils.CookieUtil;
 import com.sectest.seckilldemo.utils.MD5Util;
@@ -18,7 +18,6 @@ import org.springframework.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.UUID;
 
 /**
  * <p>
@@ -29,7 +28,7 @@ import java.util.UUID;
  * @since 2021-03-25
  */
 @Service
-public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
+public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
     @Autowired
     private UserMapper userMapper;

@@ -53,6 +53,7 @@ public class CodeGenerator {
         gc.setBaseColumnList(true);
         //日期格式 ，采用Date
         gc.setDateType(DateType.ONLY_DATE);
+        gc.setServiceName("%sService");
         // gc.setSwagger2(true); 实体属性 Swagger2 注解
         mpg.setGlobalConfig(gc);
 
@@ -123,6 +124,7 @@ public class CodeGenerator {
         //strategy.setSuperEntityClass("你自己的父类实体,没有就不用设置!");
         strategy.setEntityLombokModel(true);
         //strategy.setRestControllerStyle(true);
+
         // 公共父类
         //strategy.setSuperControllerClass("你自己的父类控制器,没有就不用设置!");
         // 写于父类中的公共字段

@@ -1,7 +1,7 @@
 package com.sectest.seckilldemo.config;
 
 import com.sectest.seckilldemo.entity.User;
-import com.sectest.seckilldemo.service.IUserService;
+import com.sectest.seckilldemo.service.UserService;
 import com.sectest.seckilldemo.utils.CookieUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;
@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 public class UserArgumentResolver implements HandlerMethodArgumentResolver {
 
     @Autowired
-    private IUserService userService;
+    private UserService userService;
 
     @Override
     public boolean supportsParameter(MethodParameter methodParameter) {
