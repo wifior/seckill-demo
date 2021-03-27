@@ -2,6 +2,8 @@ package com.sectest.seckilldemo.service;
 
 import com.sectest.seckilldemo.entity.Order;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.sectest.seckilldemo.entity.User;
+import com.sectest.seckilldemo.vo.GoodsVo;
 
 /**
  * <p>
@@ -13,4 +15,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface OrderService extends IService<Order> {
 
+    Order seckill(User user, GoodsVo goodsVo);
 }

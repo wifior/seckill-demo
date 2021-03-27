@@ -15,7 +15,11 @@ public enum RespEnum {
     //登陆模块
     LOGIN_ERROR(500210,"用户名或密码错误"),
     MOBILE_ERROR(500211,"手机号格式错误"),
-    BIND_ERROR(500212,"绑定异常");
+    BIND_ERROR(500212,"绑定异常"),
+
+    EMPTY_STOCK(500500,"空库存"),
+    REPEATE_ERROR(500501,"该商品每人一件")
+    ;
 
     private final Integer code;
     private final String message;
