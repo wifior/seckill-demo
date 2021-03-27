@@ -26,6 +26,17 @@ spring:
       # 测试连接是否可用查询语句
       connection-test-query: SELECT 1
 
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+    timeout: 10000ms
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: 10000ms
+        max-idle: 200
+        min-idle: 5
 #mybatis-plus配置
 mybatis-plus:
   # 配置Mapper.xml映射文件
